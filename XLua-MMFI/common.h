@@ -9,7 +9,7 @@
 
 typedef std::list<void*> GenList;
 
-#define EF_ISHWA 112
+//#define EF_ISHWA 112
 
 #define LPARAM_TABLE 1
 #define LPARAM_KEY	2

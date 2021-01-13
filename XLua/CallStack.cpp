@@ -114,6 +114,8 @@ void CallStack::ClearStack () {
 int CallStack::CallLuaFunction (const char* func) {
 	_level++;
 
+	lua_pcall(_state->state, 0, 0, 0);
+
 	// Require safe FP environment
 	_fpcontrol = fp_precision_double();
 

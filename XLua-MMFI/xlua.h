@@ -14,7 +14,7 @@
 
 #include	"surface.h"
 
-#include	"lua.hpp"
+#include	"..\XLua\Lua\lua.hpp"
 
 #define MAKEID(a,b,c,d)				((#@a<<24)|(#@b<<16)|(#@c<<8)|(#@d)) 
 

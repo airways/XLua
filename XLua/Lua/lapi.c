@@ -484,6 +484,7 @@ LUA_API void lua_pushcclosure (lua_State *L, lua_CFunction fn, int n) {
   luaC_checkGC(L);
   api_checknelems(L, n);
   cl = luaF_newCclosure(L, n, getcurrenv(L));
+  cl->l.isC = 1;
   cl->c.f = fn;
   L->top -= n;
   while (n--)

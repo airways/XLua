@@ -1,7 +1,7 @@
 #ifndef XSDK_ARRAY_H_
 #define XSDK_ARRAY_H_
 
-#include "lua.hpp"
+#include	"..\XLua\Lua\lua.hpp"
 
 namespace XSDK {
 

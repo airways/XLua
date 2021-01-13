@@ -2,6 +2,7 @@
 #include "array.h"
 
 #include <new>
+#include "Fill.h"
 
 static int NewXLuaSurface (lua_State* L, BaseSurfaceRefFactory* factory, bool init = false);
 

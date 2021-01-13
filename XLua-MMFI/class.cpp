@@ -6,7 +6,7 @@ int ObjectClass::IndexMetamethod (lua_State* L) {
 	if (lua_tonumber(L, lua_upvalueindex(UV_TYPE)) != TYPE_CLASS)
 		return 0;
 
-	//const char* key = lua_tostring(L, 2);
+	const char* key = lua_tostring(L, 2);
 
 	int ret = StandardIndex(L, ObjectClassRead, ObjectClassWrite);
 	if (ret > -1) return ret;
@@ -18,7 +18,7 @@ int ObjectClass::NewIndexMetamethod (lua_State* L) {
 	if (lua_tonumber(L, lua_upvalueindex(UV_TYPE)) != TYPE_CLASS)
 		return 0;
 
-	//const char* key = lua_tostring(L, 2);
+	const char* key = lua_tostring(L, 2);
 
 	int ret = StandardNewIndex(L, ObjectClassRead, ObjectClassWrite);
 	if (ret > -1) return ret;
@@ -63,22 +63,34 @@ int ObjectClass::NewObjectClass (lua_State* L) {
 
 	int rtHWA = rhPtr->rh4.rh4Mv->mvCallFunction(NULL, EF_ISHWA, 0, 0, 0);
 
-	const char* name = lua_tostring(L, 1);
-
 	LPOIL oiList = rhPtr->rhOiList;
 	LPOIL oi = 0;
 
-	for (int i = 0; i < rhPtr->rhNumberOi; i++) {
-		LPOIL currentOi;
-		if (rtHWA)
-			currentOi = (LPOIL)((char*)oiList + i * (sizeof(objInfoList) + 4));
-		else
-			currentOi = oiList + i;
-		
-		if (strcmp((char*)(&currentOi->oilName), name) == 0) {
-			oi = currentOi;
-			break;
+	const char* name = lua_tostring(L, 1); 
+	int size = MultiByteToWideChar(CP_ACP, MB_ERR_INVALID_CHARS, name, strlen(name), 0, 0);
+	LPWSTR w_name = (LPWSTR)LocalAlloc(LPTR, size);
+	if (w_name) {
+		MultiByteToWideChar(CP_ACP, MB_ERR_INVALID_CHARS, name, strlen(name), w_name, size);
+		w_name[size] = 0;
+
+		for (int i = 0; i < rhPtr->rhNumberOi; i++) {
+			LPOIL currentOi;
+			if (rtHWA)
+				currentOi = (LPOIL)((char*)oiList + i * (sizeof(objInfoList)));
+			else
+				currentOi = oiList + i;
+
+			if (wcscmp(currentOi->oilName, w_name) == 0) {
+				oi = currentOi;
+				break;
+			}
 		}
+
+		LocalFree(w_name);
+		w_name = NULL;
+	}
+	else {
+		return 0;
 	}
 
 	if (!oi)

@@ -7,7 +7,10 @@ int Sprites::SpritesIndex (lua_State* L) {
 	if ((o->hoOEFlags & OEFLAG_SPRITES) == 0)
 		return -1;
 
-	return StandardIndex(L, SpritesRead, SpritesWrite);
+	const char* key = lua_tostring(L, 2);
+
+	int ret = StandardIndex(L, SpritesRead, SpritesWrite);
+	return ret;
 }
 
 int Sprites::SpritesNewIndex (lua_State* L) {
@@ -15,7 +18,10 @@ int Sprites::SpritesNewIndex (lua_State* L) {
 	if ((o->hoOEFlags & OEFLAG_SPRITES) == 0)
 		return -1;
 
-	return StandardNewIndex(L, SpritesRead, SpritesWrite);
+	const char* key = lua_tostring(L, 2);
+
+	int ret = StandardNewIndex(L, SpritesRead, SpritesWrite);
+	return ret;
 }
 
 void Sprites::ColFlagCheck (lua_State* L, LPRH rh, LPHO ho) {
