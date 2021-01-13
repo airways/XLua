@@ -100,9 +100,13 @@ int ObjectClass::NewObjectClass (lua_State* L) {
 		mbstowcs(wide_name, name, size);
 
 		for (int i = 0; i < rhPtr->rhNumberOi; i++) {
-			LPOIL currentOi = (LPOIL)(((char*)oiList) + oiListItemSize * i);
+			LPOIL currentOi;
+			if (rtHWA)
+				currentOi = (LPOIL)((char*)oiList + i * (sizeof(objInfoList)));
+			else
+				currentOi = oiList + i;
 
-			if (!wcscmp((wchar_t *)currentOi->oilName, wide_name)) {
+			if (wcscmp(currentOi->oilName, wide_name) == 0) {
 				oi = currentOi;
 				break;
 			}
@@ -112,17 +116,12 @@ int ObjectClass::NewObjectClass (lua_State* L) {
 		for (int i = 0; i < rhPtr->rhNumberOi; i++) {
 			LPOIL currentOi = (LPOIL)(((char*)oiList) + oiListItemSize * i);
 
-			if (!strcmp(currentOi->oilName, name)) {
+			if (!strcmp((char*)currentOi->oilName, name)) {
 				oi = currentOi;
 				break;
 			}
 		}
 
-		LocalFree(w_name);
-		w_name = NULL;
-	}
-	else {
-		return 0;
 	}
 
 	if (!oi)

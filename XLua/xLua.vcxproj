@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug_rev|Win32">
       <Configuration>Debug_rev</Configuration>
@@ -50,52 +50,52 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Run_Only_Nolegacy|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Run_Only_Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_rev|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Small|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vitalize_Small|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140_xp</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Run_Only|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vitalize|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Run_Only_Small|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -143,58 +143,67 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <_ProjectFileVersion>14.0.25420.1</_ProjectFileVersion>
+    <_ProjectFileVersion>16.0.30323.82</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Run_Only_Small|Win32'">
     <OutDir>.\Run_Only_Small\</OutDir>
     <IntDir>.\Run_Only_Small\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vitalize|Win32'">
     <OutDir>.\Vitalize\</OutDir>
     <IntDir>.\Vitalize\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Run_Only|Win32'">
     <OutDir>.\Run_Only\</OutDir>
     <IntDir>.\Run_Only\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Release\</OutDir>
     <IntDir>.\Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>D:\Dev\Fusion\SDKs\XLua\rSDK\Lib;$(LibraryPath)</LibraryPath>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vitalize_Small|Win32'">
     <OutDir>.\Vitalize_Small\</OutDir>
     <IntDir>.\Vitalize_Small\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Small|Win32'">
     <OutDir>.\Release_Small\</OutDir>
     <IntDir>.\Release_Small\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_rev|Win32'">
     <OutDir>$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Run_Only_Debug|Win32'">
     <OutDir>$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Run_Only_Nolegacy|Win32'">
     <OutDir>$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Run_Only_Small|Win32'">
     <Midl>
@@ -210,7 +219,7 @@
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>..\..\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;RUN_ONLY;COMPILE_SMALL;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;%(PreprocessorDefinitions);_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;RUN_ONLY;COMPILE_SMALL;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -259,7 +268,7 @@
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>..\..\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;RUN_ONLY;VITALIZE;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;%(PreprocessorDefinitions);_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;RUN_ONLY;VITALIZE;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -308,7 +317,7 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <AdditionalIncludeDirectories>.\Scintilla\include;..\rSDK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>XLUA_LEGACY;NDEBUG;RUN_ONLY;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;STATIC_BUILD;SCI_NAMESPACE;SCI_LEXER;%(PreprocessorDefinitions);_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>XLUA_LEGACY;NDEBUG;RUN_ONLY;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;STATIC_BUILD;SCI_NAMESPACE;SCI_LEXER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -359,8 +368,8 @@
     <ClCompile>
       <AdditionalOptions>/D_CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\rSDK\Inc;.\Scintilla\include;.\Scintilla\src;.\Scintilla\lexlib;.\Scintilla\lexers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>XLUA_LEGACY;_DEBUG;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;STATIC_BUILD;SCI_NAMESPACE;SCI_LEXER;%(PreprocessorDefinitions);_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\Fusion25SDK\Inc;.\Scintilla\include;.\Scintilla\src;.\Scintilla\lexlib;.\Scintilla\lexers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XLUA_LEGACY;_DEBUG;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;STATIC_BUILD;SCI_NAMESPACE;SCI_LEXER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader />
@@ -379,13 +388,13 @@
       <AdditionalIncludeDirectories>..\..\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>d:\git\LuaJIT-2.0\src\lua51.lib;odbc32.lib;odbccp32.lib;mmfs2.lib;imm32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>c:\Program Files (x86)\Clickteam Fusion Developer 2.5\Extensions\xlua.mfx</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;mmfs2.lib;imm32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)xlua.mfx</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\rSDK\Lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\Fusion25SDK\Lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\Ext.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\Debug/xlua.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\Debug\xlua.pdb</ProgramDatabaseFile>
       <GenerateMapFile>true</GenerateMapFile>
       <MapExports>true</MapExports>
       <SubSystem>Windows</SubSystem>
@@ -411,8 +420,8 @@
       <AdditionalOptions>/D_CRT_SECURE_NO_WARNINGS /D "_SECURE_SCL=0" %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Full</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>..\rSDK\Inc;.\Scintilla\include;.\Scintilla\src;.\Scintilla\lexlib;.\Scintilla\lexers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>XLUA_LEGACY;NDEBUG;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;STATIC_BUILD;SCI_NAMESPACE;SCI_LEXER;%(PreprocessorDefinitions);_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\Fusion25SDK\Inc;.\Scintilla\include;.\Scintilla\src;.\Scintilla\lexlib;.\Scintilla\lexers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XLUA_LEGACY;NDEBUG;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;STATIC_BUILD;SCI_NAMESPACE;SCI_LEXER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Sync</ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -433,13 +442,13 @@
       <AdditionalIncludeDirectories>..\..\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>d:\git\LuaJIT-2.0\src\lua51.lib;odbc32.lib;odbccp32.lib;mmfs2.lib;imm32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;mmfs2.lib;imm32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)xlua.mfx</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\..\vendor\SDK\current\Lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\Fusion25SDK\Lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\Ext.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\Release/xlua.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\Release\xlua.pdb</ProgramDatabaseFile>
       <GenerateMapFile>true</GenerateMapFile>
       <MapExports>true</MapExports>
       <SubSystem>Windows</SubSystem>
@@ -467,7 +476,7 @@
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>..\..\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;RUN_ONLY;COMPILE_SMALL;VITALIZE;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;%(PreprocessorDefinitions);_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;RUN_ONLY;COMPILE_SMALL;VITALIZE;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -514,7 +523,7 @@
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>..\..\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;COMPILE_SMALL;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;%(PreprocessorDefinitions);_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;COMPILE_SMALL;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -563,7 +572,7 @@
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>.\xLua\lua514;..\..\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;%(PreprocessorDefinitions);_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader />
@@ -616,7 +625,7 @@
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <AdditionalIncludeDirectories>.\Scintilla\include;..\rSDK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>DDEBUG;RUN_ONLY;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;STATIC_BUILD;SCI_NAMESPACE;SCI_LEXER;%(PreprocessorDefinitions);_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>DDEBUG;RUN_ONLY;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;STATIC_BUILD;SCI_NAMESPACE;SCI_LEXER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -670,7 +679,7 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <AdditionalIncludeDirectories>.\Scintilla\include;..\rSDK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;RUN_ONLY;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;STATIC_BUILD;SCI_NAMESPACE;SCI_LEXER;%(PreprocessorDefinitions);_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;RUN_ONLY;WIN32;_WINDOWS;STRICT;COXSDK;IN_EXT_VERSION2;RSDK;STATIC_BUILD;SCI_NAMESPACE;SCI_LEXER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -739,8 +748,42 @@
     <ClCompile Include="LuaXLua.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Run_Only_Nolegacy|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Lua\bit.c" />
+    <ClCompile Include="Lua\lapi.c" />
+    <ClCompile Include="Lua\lauxlib.c" />
+    <ClCompile Include="Lua\lbaselib.c" />
+    <ClCompile Include="Lua\lcoco.c" />
+    <ClCompile Include="Lua\lcode.c" />
     <ClCompile Include="Lua\ldblib.c" />
+    <ClCompile Include="Lua\ldebug.c" />
+    <ClCompile Include="Lua\ldo.c" />
+    <ClCompile Include="Lua\ldump.c" />
+    <ClCompile Include="Lua\lfunc.c" />
+    <ClCompile Include="Lua\lgc.c" />
+    <ClCompile Include="Lua\linit.c" />
+    <ClCompile Include="Lua\liolib.c" />
+    <ClCompile Include="Lua\ljitlib.c" />
+    <ClCompile Include="Lua\ljit_backend.c" />
+    <ClCompile Include="Lua\ljit_core.c" />
+    <ClCompile Include="Lua\ljit_dasm.c" />
+    <ClCompile Include="Lua\ljit_mem.c" />
+    <ClCompile Include="Lua\llex.c" />
+    <ClCompile Include="Lua\lmathlib.c" />
+    <ClCompile Include="Lua\lmem.c" />
     <ClCompile Include="Lua\loadlib.c" />
+    <ClCompile Include="Lua\lobject.c" />
+    <ClCompile Include="Lua\lopcodes.c" />
+    <ClCompile Include="Lua\loslib.c" />
+    <ClCompile Include="Lua\lparser.c" />
+    <ClCompile Include="Lua\lstate.c" />
+    <ClCompile Include="Lua\lstring.c" />
+    <ClCompile Include="Lua\lstrlib.c" />
+    <ClCompile Include="Lua\ltable.c" />
+    <ClCompile Include="Lua\ltablib.c" />
+    <ClCompile Include="Lua\ltm.c" />
+    <ClCompile Include="Lua\lundump.c" />
+    <ClCompile Include="Lua\lvm.c" />
+    <ClCompile Include="Lua\lzio.c" />
     <ClCompile Include="Lua\xlua.cpp" />
     <ClCompile Include="MainActions.cpp" />
     <ClCompile Include="MainConditions.cpp" />

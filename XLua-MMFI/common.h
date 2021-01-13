@@ -1,6 +1,7 @@
 #ifndef COMMON_H_
 #define COMMON_H_
 
+#define COXSDK
 #include "xlua.h"
 #include "enum.h"
 //#include "container.h"
