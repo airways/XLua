@@ -62,6 +62,11 @@ void ScriptManager::InitDlg (HWND dlg) {
 
 	stec.SetWindow(reinterpret_cast<long>(sci));
 
+	// Disable close button/window menu item (it causes a crash when we
+	// undo changes)
+	EnableMenuItem(GetSystemMenu(dlg, FALSE), SC_CLOSE,
+		MF_BYCOMMAND | MF_DISABLED | MF_GRAYED);
+
 	if (!edPtr->tData->scripts) {
 		edPtr->tData->scripts = new ScriptSet(mV);
 		edPtr->tData->scripts->Refresh(mV, edPtr);
