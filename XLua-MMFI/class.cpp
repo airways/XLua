@@ -61,26 +61,58 @@ int ObjectClass::NewObjectClass (lua_State* L) {
 	if (!rhPtr)
 		return 0;
 
-	int rtHWA = rhPtr->rh4.rh4Mv->mvCallFunction(NULL, EF_ISHWA, 0, 0, 0);
+	static bool rtHWA = rhPtr->rh4.rh4Mv->mvCallFunction(NULL, EF_ISHWA, 0, 0, 0);
+	static bool rtUnicode = rhPtr->rh4.rh4Mv->mvCallFunction(NULL, EF_ISUNICODE, 0, 0, 0);
+
+	size_t oiListItemSize = sizeof(objInfoList);
+
+
+#ifdef UNICODE //ACT_EXTSTOPTORQUE <- this should work according to Yves, guess it assumes Unicode?
+	// Fusion 2.5 SDK
+
+	if (!rtUnicode)
+		oiListItemSize -= 24;
+#ifndef HWABETA
+	if (!rtHWA)
+		oiListItemSize -= sizeof(LPVOID);
+#endif
+
+#else
+	// Fusion 2.0 SDK
+
+	if (rtUnicode)
+		oiListItemSize += 24;
+#ifndef HWABETA
+	if (rtHWA)
+		oiListItemSize += sizeof(LPVOID);
+#endif
+
+#endif
 
 	LPOIL oiList = rhPtr->rhOiList;
 	LPOIL oi = 0;
 
-	const char* name = lua_tostring(L, 1); 
-	int size = MultiByteToWideChar(CP_ACP, MB_ERR_INVALID_CHARS, name, strlen(name), 0, 0);
-	LPWSTR w_name = (LPWSTR)LocalAlloc(LPTR, size);
-	if (w_name) {
-		MultiByteToWideChar(CP_ACP, MB_ERR_INVALID_CHARS, name, strlen(name), w_name, size);
-		w_name[size] = 0;
+	const char* name = lua_tostring(L, 1);
+
+	if (rtUnicode) {
+		const size_t size = strlen(name) + 1;
+		wchar_t wide_name[25] = {};
+		mbstowcs(wide_name, name, size);
 
 		for (int i = 0; i < rhPtr->rhNumberOi; i++) {
-			LPOIL currentOi;
-			if (rtHWA)
-				currentOi = (LPOIL)((char*)oiList + i * (sizeof(objInfoList)));
-			else
-				currentOi = oiList + i;
+			LPOIL currentOi = (LPOIL)(((char*)oiList) + oiListItemSize * i);
 
-			if (wcscmp(currentOi->oilName, w_name) == 0) {
+			if (!wcscmp((wchar_t *)currentOi->oilName, wide_name)) {
+				oi = currentOi;
+				break;
+			}
+		}
+	}
+	else {
+		for (int i = 0; i < rhPtr->rhNumberOi; i++) {
+			LPOIL currentOi = (LPOIL)(((char*)oiList) + oiListItemSize * i);
+
+			if (!strcmp(currentOi->oilName, name)) {
 				oi = currentOi;
 				break;
 			}
@@ -104,8 +136,7 @@ int ObjectClass::NewObjectClass (lua_State* L) {
 
 	if (lua_istable(L, -1))
 		return 1;
-	else
-		lua_pop(L, 1);
+	lua_pop(L, 1);
 
 	int (*index_method)(lua_State*L) = ObjectClass::IndexMetamethod;
 	int (*newindex_method)(lua_State*L) = ObjectClass::IndexMetamethod;
@@ -248,7 +279,7 @@ int ObjectClass::ObjectList (lua_State* L) {
 	int i = 1;
 	while (true) {
 		lua_pushcfunction(L, Object::NewObject);
-		lua_pushinteger(L, cur->hoOi << 16 | cur->hoNumber);
+		lua_pushinteger(L, (cur->hoCreationId << 16) | cur->hoNumber);
 		lua_call(L, 1, 1);
 		lua_rawseti(L, -2, i++);
 

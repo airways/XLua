@@ -140,3 +140,19 @@ LPRH xlua_get_run_header (lua_State* L) {
 
 	return state->rdList.front()->rdPtr->rHo.hoAdRunHeader;
 }
+
+void(*g_frameChangeHooks[100])(lua_State*, int) = {};
+lua_State* g_frameChangeStates[100] = {};
+int g_frameChangeHookCount = 0;
+
+bool xlua_register_frame_change_hook(lua_State* L, void(*hook)(lua_State*, int)) {
+	if (g_frameChangeHookCount == 100)
+		return false;
+	for (int i = 0; i < g_frameChangeHookCount; i++) {
+		if (g_frameChangeHooks[i] == hook && g_frameChangeStates[i] == L)
+			return true;
+	}
+	g_frameChangeHooks[g_frameChangeHookCount] = hook;
+	g_frameChangeStates[g_frameChangeHookCount++] = L;
+	return true;
+}

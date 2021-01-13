@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
@@ -6,21 +6,21 @@
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="Source Files\XSDK">
-      <UniqueIdentifier>{110daaf9-744b-4ce3-a1ad-5409f9af6885}</UniqueIdentifier>
+      <UniqueIdentifier>{77fae444-346c-4539-ac97-ce4dba8ddf31}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
     <Filter Include="Header Files\XSDK">
-      <UniqueIdentifier>{40c093ff-7100-4a9d-bc82-069ea6a7cfef}</UniqueIdentifier>
+      <UniqueIdentifier>{6c950afe-314a-4efa-8a22-895ee675d87b}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
     <Filter Include="MMF Headers">
-      <UniqueIdentifier>{16a930a5-3d1d-4282-bcda-8f9d26148586}</UniqueIdentifier>
+      <UniqueIdentifier>{4da679e1-8dbd-4782-a810-635ce922d56a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

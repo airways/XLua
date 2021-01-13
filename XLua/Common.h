@@ -1,10 +1,7 @@
 // Include guard
 #ifndef COMMON_H
 #define COMMON_H
-
 #define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
-
-//#define EF_ISHWA 112
 
 // Suppress the deprecated warnings for VC2005
 // #define _CRT_SECURE_NO_WARNINGS

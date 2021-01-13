@@ -1,32 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{25a77878-4821-42f2-84f7-2a7d03273b5c}</UniqueIdentifier>
+      <UniqueIdentifier>{0debec9e-38c3-4506-9dbe-99d7f40dafd6}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
     </Filter>
-    <Filter Include="Source Files\Lua">
-      <UniqueIdentifier>{0d74befc-e67a-4918-a496-9e449ec1913a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Scintilla">
-      <UniqueIdentifier>{00fab93b-a4ec-483f-b052-e2b9d0fcff0b}</UniqueIdentifier>
+      <UniqueIdentifier>{3b40e378-6529-4604-8513-d1e9884eed06}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{e0d6b357-4312-4312-9831-d587c8c1a00a}</UniqueIdentifier>
+      <UniqueIdentifier>{118f9e5d-e630-4a94-b365-b03cc0521cb4}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl</Extensions>
     </Filter>
     <Filter Include="Header Files\Lua">
-      <UniqueIdentifier>{7e9c3b52-7ec0-4184-b8f7-ccdb24bb47f6}</UniqueIdentifier>
+      <UniqueIdentifier>{bf006f0d-0df1-4762-9644-e0b1ee8872b5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Scintilla">
-      <UniqueIdentifier>{e5631392-7826-481a-8f87-2f3976dde163}</UniqueIdentifier>
+      <UniqueIdentifier>{59e4cb54-d0d4-49f5-aaa9-6ebdd303f6a4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{d1e95f2c-e1fd-45d3-999b-140c6c1fa146}</UniqueIdentifier>
+      <UniqueIdentifier>{b52a7216-e7be-4fe8-ad43-6b8bc176aeb7}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
     <Filter Include="MMF Headers">
-      <UniqueIdentifier>{4548ff4f-d7fc-4048-afa4-84f7152d9d74}</UniqueIdentifier>
+      <UniqueIdentifier>{f99bc888-fff8-4255-bef6-d11b141fa356}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -77,117 +74,6 @@
     </ClCompile>
     <ClCompile Include="XLuaState.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\bit.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lapi.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lauxlib.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lbaselib.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lcoco.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lcode.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\ldblib.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\ldebug.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\ldo.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\ldump.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lfunc.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lgc.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\linit.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\liolib.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\ljit_backend.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\ljit_core.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\ljit_dasm.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\ljit_mem.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\ljitlib.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\llex.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lmathlib.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lmem.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\loadlib.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lobject.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lopcodes.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\loslib.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lparser.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lstate.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lstring.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lstrlib.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\ltable.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\ltablib.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\ltm.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lundump.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lvm.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\lzio.c">
-      <Filter>Source Files\Lua</Filter>
-    </ClCompile>
-    <ClCompile Include="Lua\xlua.cpp">
-      <Filter>Source Files\Lua</Filter>
     </ClCompile>
     <ClCompile Include="Scintilla\lexlib\Accessor.cxx">
       <Filter>Source Files\Scintilla</Filter>
@@ -293,6 +179,15 @@
     </ClCompile>
     <ClCompile Include="Scintilla\src\XPM.cxx">
       <Filter>Source Files\Scintilla</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\xlua.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\ldblib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua\loadlib.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

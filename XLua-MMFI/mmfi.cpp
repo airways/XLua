@@ -9,7 +9,7 @@
 
 #include "xsurface.h"
 
-void PushStandardClosure (lua_State* L, lua_CFunction func) {
+void PushStandardClosure(lua_State* L, lua_CFunction func) {
 	lua_pushstring(L, KEY_POOL_OBJECT);
 	lua_rawget(L, LUA_REGISTRYINDEX);
 	lua_pushstring(L, KEY_POOL_CLASS);
@@ -18,7 +18,7 @@ void PushStandardClosure (lua_State* L, lua_CFunction func) {
 	lua_pushcclosure(L, func, 2);
 }
 
-extern "C" __declspec(dllexport) int luaopen_mmfi (lua_State *L) {
+extern "C" __declspec(dllexport) int luaopen_mmfi(lua_State * L) {
 
 	// Registry
 	lua_pushstring(L, KEY_POOL_OBJECT);
@@ -58,12 +58,17 @@ extern "C" __declspec(dllexport) int luaopen_mmfi (lua_State *L) {
 
 	lua_pop(L, 1);
 
-	// New* Functions
-	//PushStandardClosure(L, Object::NewObject);
-	//lua_setglobal(L, "NewObject");
+	// Upon frame change, purge all caches
+	LPRH rh = xlua_get_run_header(L);
+	xlua_register_frame_change_hook(L, [](lua_State* L, int frameIndex) {
+		lua_pushstring(L, KEY_POOL_OBJECT);
+		lua_createtable(L, 0, 0);
+		lua_rawset(L, LUA_REGISTRYINDEX);
 
-	//PushStandardClosure(L, ObjectClass::NewObjectClass);
-	//lua_setglobal(L, "NewObjectClass");
+		lua_pushstring(L, KEY_POOL_CLASS);
+		lua_createtable(L, 0, 0);
+		lua_rawset(L, LUA_REGISTRYINDEX);
+	});
 
 	// MMFI
 	lua_newtable(L);
